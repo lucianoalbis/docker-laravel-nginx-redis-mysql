@@ -28,3 +28,8 @@ Conteiners
 -> docker-laravel-56_app_1
 -> docker-laravel-56_database_1
 -> docker-laravel-56_web_1
+
+Start
+-> docker start docker-laravel-56_redis_1 docker-laravel-56_app_1 docker-laravel-56_database_1 docker-laravel-56_web_1
+Stop
+-> docker stop docker-laravel-56_redis_1 docker-laravel-56_app_1 docker-laravel-56_database_1 docker-laravel-56_web_1
