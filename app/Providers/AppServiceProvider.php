@@ -23,6 +23,16 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        # Use GraphQl
+        $this->app->bind(
+            'App\Http\Repository\RiskApiRepositoryInterface',
+            'App\Http\Repository\GraphQlRiskClientRepository'
+        );
+
+        # Use Log
+        $this->app->bind(
+            'App\Http\Interfaces\LogInterface',
+            'App\Http\Classes\Log\RiskLogFus'
+        );
     }
 }
