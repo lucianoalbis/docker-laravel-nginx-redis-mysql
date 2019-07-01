@@ -2,7 +2,7 @@
 
 namespace App\Http\Services;
 
-use App\Http\Repository\RiskApiRepositoryInterface;
+use App\Http\Interfaces\RiskApiRepositoryInterface;
 
 class ApiRiskService
 {
@@ -13,13 +13,18 @@ class ApiRiskService
         $this->riskClientRepository = $riskClientRepository;
     }
 
-    public function querie()
+    public function read($params)
     {
-        return $this->riskClientRepository->querie();
+        return $this->riskClientRepository->read($params);
     }
 
-    public function mutation()
+    public function create($params)
     {
-        return $this->riskClientRepository->mutation();
+        return $this->riskClientRepository->create($params);
+    }
+
+    public function update($params)
+    {
+        return $this->riskClientRepository->update($params);
     }
 }

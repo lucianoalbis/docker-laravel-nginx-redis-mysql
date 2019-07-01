@@ -25,7 +25,7 @@ class AppServiceProvider extends ServiceProvider
     {
         # Use GraphQl
         $this->app->bind(
-            'App\Http\Repository\RiskApiRepositoryInterface',
+            'App\Http\Interfaces\RiskApiRepositoryInterface',
             'App\Http\Repository\GraphQlRiskClientRepository'
         );
 
@@ -33,6 +33,12 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(
             'App\Http\Interfaces\LogInterface',
             'App\Http\Classes\Log\RiskLogFus'
+        );
+
+        # Send Mail
+        $this->app->bind(
+            'App\Http\Interfaces\MensagemInterface',
+            'App\Http\Classes\Email'
         );
     }
 }

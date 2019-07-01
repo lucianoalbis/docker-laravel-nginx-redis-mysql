@@ -6,6 +6,6 @@ class IndexServices
 {
     public function checkRedis(array $request)
     {
-        return 1;
+        return response()->json('ok');
     }
 }

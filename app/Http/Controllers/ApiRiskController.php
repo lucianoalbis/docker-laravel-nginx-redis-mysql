@@ -13,13 +13,18 @@ class ApiRiskController extends Controller
         $this->apiService = $apiService;
     }
 
-    public function querie()
+    public function read($params = null)
     {
-        return $this->apiService->querie();
+        return $this->apiService->read($params);
     }
 
-    public function mutation()
+    public function create($params)
     {
-        return $this->apiService->mutation();
+        return $this->apiService->create($params);
+    }
+
+    public function update($params)
+    {
+        return $this->apiService->update($params);
     }
 }

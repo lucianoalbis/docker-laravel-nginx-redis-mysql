@@ -1,13 +1,23 @@
 <?php
 
 # Tests
-Route::get('/', 'IndexController@index');
-Route::get('/redis', 'IndexController@checkRedis');
+Route::group(['prefix' => 'check'], function () {
+    Route::get('/', 'IndexController@index');
+    Route::get('/redis', 'IndexController@checkRedis');
+});
 
-# Use Repository
-Route::get('/querie', 'ApiRiskController@querie');
-Route::get('/mutation', 'ApiRiskController@mutation');
+# Risk
+Route::group(['prefix' => 'risk'], function () {
+    Route::get('/read', 'ApiRiskController@read');
+});
 
-# Use Dependency Injection
-Route::get('/write', 'LogController@write');
-Route::get('/read', 'LogController@read');
+# Logs
+Route::group(['prefix' => 'log'], function () {
+    Route::get('/write', 'LogController@write');
+    Route::get('/read', 'LogController@read');
+});
+
+# Notification
+Route::group(['prefix' => 'notification'], function () {
+    Route::get('/send', 'NotificationController@enviar');
+});
