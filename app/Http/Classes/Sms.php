@@ -7,6 +7,6 @@ class Sms implements MensagemInterface
 {
     public function enviar ($mensagem)
     {
-        return 'Enviando Sms';
+        return 'Enviando SMS';
     }
 }
