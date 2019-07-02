@@ -2,19 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Interfaces\MensagemInterface;
+use App\Http\Services\NotificationService;
 
 class NotificationController extends Controller
 {
-    private $mensagem;
+    private $notificationService;
 
-    public function __construct(MensagemInterface $mensagem)
+    public function __construct(NotificationService $notificationService)
     {
-        $this->mensagem = $mensagem;
+        $this->notificationService = $notificationService;
     }
 
     public function enviar($mensagem = null)
     {
-        return $this->mensagem->enviar($mensagem);
+        return $this->notificationService->enviar($mensagem);
     }
 }
