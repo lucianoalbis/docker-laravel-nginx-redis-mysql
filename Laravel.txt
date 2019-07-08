@@ -1,3 +1,11 @@
 Usando eventos
 
 -> https://artisansweb.net/how-to-use-laravel-events-and-listeners-in-your-application/
+
+Trabalhando com seeds no Laravel 5
+
+-> https://medium.com/by-vinicius-reis/trabalhando-com-seeds-no-laravel-5-142829ddc32e
+
+Trabalhando com Faker no Laravel 5
+
+-> https://www.codermen.com/blog/75/how-to-use-faker-with-laravel-5-7-tutorial
