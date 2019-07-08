@@ -38,7 +38,7 @@ class AppServiceProvider extends ServiceProvider
         # Send Mail
         $this->app->bind(
             'App\Http\Interfaces\MensagemInterface',
-            'App\Http\Classes\Email'
+            'App\Http\Classes\Sms'
         );
     }
 }

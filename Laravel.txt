@@ -1,0 +1,3 @@
+Usando eventos
+
+-> https://artisansweb.net/how-to-use-laravel-events-and-listeners-in-your-application/

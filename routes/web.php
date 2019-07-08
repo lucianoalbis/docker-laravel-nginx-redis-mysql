@@ -21,3 +21,8 @@ Route::group(['prefix' => 'log'], function () {
 Route::group(['prefix' => 'notification'], function () {
     Route::get('/send', 'NotificationController@enviar');
 });
+
+# Test events
+Route::group(['prefix' => 'event'], function () {
+    Route::get('/event', 'EventController@event');
+});
