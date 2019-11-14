@@ -43,3 +43,9 @@ Model: GET http://localhost:8080/prefix/<controller_action>
 Exemplo:
 
 -> GET http://localhost:8080/notification/send
+
+============
+Autenticação
+============
+
+https://medium.com/techcompose/create-rest-api-in-laravel-with-authentication-using-passport-133a1678a876
