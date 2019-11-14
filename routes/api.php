@@ -21,3 +21,12 @@ Route::get('/test', function () {
     return response('Test API', 200)
         ->header('Content-Type', 'application/json');
 });
+
+Route::group(['namespace' => 'API'], function(){
+    Route::post('login', 'UserController@login');
+    Route::post('register', 'UserController@register');
+});
+
+Route::group(['namespace' => 'API', 'middleware' => 'auth:api'], function(){
+    Route::post('details', 'UserController@details');
+});
