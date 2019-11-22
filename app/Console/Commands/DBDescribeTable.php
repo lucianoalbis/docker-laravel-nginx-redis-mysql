@@ -37,8 +37,10 @@ class DBDescribeTable extends Command
      */
     public function handle()
     {
-        do {
-            \Log::info("Command --- initial");
-        } while (true);
+        #Comentei pq o supervisor fica subindo toda hora e o arquivo fica gigante
+        #como já testei e vi que fucniona tá tranquilo
+//        do {
+//            \Log::info("Command --- initial");
+//        } while (true);
     }
 }
